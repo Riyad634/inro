@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Logo Animation</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      height: 100%;
+      background: #000;
+      overflow: hidden
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    svg {
+      width: min(100vw, 100vh);
+      height: min(100vw, 100vh);
+      display: block;
+      cursor: pointer
+    }
+
+    .fb {
+      transform-box: fill-box;
+      transform-origin: center
+    }
+
+    .mark {
+      transform-box: view-box;
+      transform-origin: 305px 540px
+    }
+  </style>
+</head>
+
+<body>
+  <svg id="stage" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" aria-label="Logo animation">
+    <defs>
+      <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+        <stop offset="0" stop-color="#0c1000" />
+        <stop offset="1" stop-color="#000" />
+      </radialGradient>
+      <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+        <stop offset="0" stop-color="#e1ff01" stop-opacity=".85" />
+        <stop offset=".35" stop-color="#e1ff01" stop-opacity=".25" />
+        <stop offset="1" stop-color="#e1ff01" stop-opacity="0" />
+      </radialGradient>
+      <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#fff" stop-opacity="0" />
+        <stop offset=".5" stop-color="#fff" stop-opacity=".75" />
+        <stop offset="1" stop-color="#fff" stop-opacity="0" />
+      </linearGradient>
+      <clipPath id="logoClip">
+        <path
+          d="M447.905 542.901 L447.908 543.052 L447.908 611.417 L418.65 611.417 L418.65 468.582 L447.908 468.582 L447.905 537.096 C447.861 538.032 447.839 539.007 447.839 539.998 C447.839 540.992 447.861 541.966 447.905 542.901" />
+        <path
+          d="M614.506 536.728 L614.506 611.417 L585.248 611.417 L585.248 543.27 L585.153 543.27 L585.153 539.999 C585.153 532.585 583.201 525.297 579.511 518.922 C575.827 512.558 570.518 507.243 564.161 503.545 C557.788 499.841 550.5 497.876 543.083 497.866 L543.019 497.866 C535.633 497.866 528.366 499.804 522.006 503.47 C515.589 507.169 510.237 512.514 506.529 518.922 C503.148 524.761 501.211 531.42 500.924 538.175 C500.897 538.779 500.885 539.391 500.885 539.999 C500.885 540.606 500.897 541.218 500.924 541.819 L500.927 541.96 L500.927 611.417 L471.671 611.417 L471.673 536.802 C471.983 529.741 473.328 522.807 475.667 516.194 C478.779 507.386 483.532 499.377 489.792 492.385 C491.574 490.394 493.486 488.482 495.479 486.705 C502.473 480.46 510.485 475.722 519.285 472.621 C526.898 469.94 534.882 468.582 543.019 468.582 L543.087 468.582 C551.257 468.59 559.266 469.967 566.897 472.674 C575.705 475.797 583.716 480.561 590.704 486.834 C592.642 488.573 594.508 490.441 596.247 492.388 C602.507 499.378 607.259 507.386 610.37 516.194 C612.707 522.801 614.046 529.694 614.363 536.728 Z" />
+        <path
+          d="M712.627 468.582 L712.627 497.866 L709.356 497.866 C701.943 497.867 694.655 499.818 688.28 503.51 C681.899 507.206 676.571 512.537 672.873 518.923 C669.182 525.297 667.23 532.585 667.23 539.998 L667.23 543.27 L667.197 543.27 L667.197 611.417 L637.94 611.417 L637.94 536.728 L638.02 536.728 C638.337 529.694 639.676 522.801 642.013 516.194 C645.124 507.387 649.876 499.378 656.137 492.385 C657.889 490.424 659.778 488.537 661.744 486.777 C668.736 480.516 676.746 475.764 685.552 472.65 C693.176 469.953 701.185 468.583 709.356 468.582 Z" />
+        <path
+          d="M793.109 581.978 C769.964 581.978 751.131 563.146 751.131 539.999 C751.131 516.854 769.964 498.022 793.109 498.022 C816.255 498.022 835.088 516.854 835.088 539.999 C835.088 563.146 816.255 581.978 793.109 581.978 M843.469 489.639 C830.019 476.19 812.134 468.781 793.109 468.781 C774.086 468.781 756.201 476.19 742.75 489.639 C729.3 503.091 721.892 520.976 721.892 539.999 C721.892 559.023 729.3 576.908 742.75 590.359 C756.201 603.81 774.086 611.218 793.109 611.218 C812.134 611.218 830.019 603.81 843.469 590.359 C856.919 576.908 864.327 559.023 864.327 539.999 C864.327 520.976 856.919 503.091 843.469 489.639"
+          fill-rule="evenodd" />
+        <path d="M395.942 554.883 L308.8 642.025 L308.8 524.949 L365.176 468.573 L365.176 554.883 Z" />
+        <path d="M215.673 525.115 L302.813 437.975 L302.813 555.05 L246.439 611.426 L246.439 525.115 Z" />
+      </clipPath>
+    </defs>
+
+    <rect width="1080" height="1080" fill="url(#bg)" />
+
+    <!-- energy glow behind the mark -->
+    <circle id="glowC" class="fb" cx="305" cy="540" r="300" fill="url(#glow)" opacity="0" />
+
+    <!-- shockwave rings -->
+    <circle id="ring1" class="fb" cx="305" cy="540" r="90" fill="none" stroke="#e1ff01" stroke-width="3" opacity="0" />
+    <circle id="ring2" class="fb" cx="793" cy="540" r="72" fill="none" stroke="#e1ff01" stroke-width="3" opacity="0" />
+    <circle id="ring3" class="fb" cx="793" cy="540" r="72" fill="none" stroke="#e1ff01" stroke-width="1.5"
+      opacity="0" />
+
+    <!-- letters -->
+    <g id="letters" fill="#fff">
+      <path class="fb L"
+        d="M447.905 542.901 L447.908 543.052 L447.908 611.417 L418.65 611.417 L418.65 468.582 L447.908 468.582 L447.905 537.096 C447.861 538.032 447.839 539.007 447.839 539.998 C447.839 540.992 447.861 541.966 447.905 542.901" />
+      <path class="fb L"
+        d="M614.506 536.728 L614.506 611.417 L585.248 611.417 L585.248 543.27 L585.153 543.27 L585.153 539.999 C585.153 532.585 583.201 525.297 579.511 518.922 C575.827 512.558 570.518 507.243 564.161 503.545 C557.788 499.841 550.5 497.876 543.083 497.866 L543.019 497.866 C535.633 497.866 528.366 499.804 522.006 503.47 C515.589 507.169 510.237 512.514 506.529 518.922 C503.148 524.761 501.211 531.42 500.924 538.175 C500.897 538.779 500.885 539.391 500.885 539.999 C500.885 540.606 500.897 541.218 500.924 541.819 L500.927 541.96 L500.927 611.417 L471.671 611.417 L471.673 536.802 C471.983 529.741 473.328 522.807 475.667 516.194 C478.779 507.386 483.532 499.377 489.792 492.385 C491.574 490.394 493.486 488.482 495.479 486.705 C502.473 480.46 510.485 475.722 519.285 472.621 C526.898 469.94 534.882 468.582 543.019 468.582 L543.087 468.582 C551.257 468.59 559.266 469.967 566.897 472.674 C575.705 475.797 583.716 480.561 590.704 486.834 C592.642 488.573 594.508 490.441 596.247 492.388 C602.507 499.378 607.259 507.386 610.37 516.194 C612.707 522.801 614.046 529.694 614.363 536.728 Z" />
+      <path class="fb L"
+        d="M712.627 468.582 L712.627 497.866 L709.356 497.866 C701.943 497.867 694.655 499.818 688.28 503.51 C681.899 507.206 676.571 512.537 672.873 518.923 C669.182 525.297 667.23 532.585 667.23 539.998 L667.23 543.27 L667.197 543.27 L667.197 611.417 L637.94 611.417 L637.94 536.728 L638.02 536.728 C638.337 529.694 639.676 522.801 642.013 516.194 C645.124 507.387 649.876 499.378 656.137 492.385 C657.889 490.424 659.778 488.537 661.744 486.777 C668.736 480.516 676.746 475.764 685.552 472.65 C693.176 469.953 701.185 468.583 709.356 468.582 Z" />
+      <path class="fb L" fill-rule="evenodd"
+        d="M793.109 581.978 C769.964 581.978 751.131 563.146 751.131 539.999 C751.131 516.854 769.964 498.022 793.109 498.022 C816.255 498.022 835.088 516.854 835.088 539.999 C835.088 563.146 816.255 581.978 793.109 581.978 M843.469 489.639 C830.019 476.19 812.134 468.781 793.109 468.781 C774.086 468.781 756.201 476.19 742.75 489.639 C729.3 503.091 721.892 520.976 721.892 539.999 C721.892 559.023 729.3 576.908 742.75 590.359 C756.201 603.81 774.086 611.218 793.109 611.218 C812.134 611.218 830.019 603.81 843.469 590.359 C856.919 576.908 864.327 559.023 864.327 539.999 C864.327 520.976 856.919 503.091 843.469 489.639" />
+    </g>
+
+    <!-- icon mark -->
+    <g id="mark" class="mark" fill="#e1ff01">
+      <path id="pieceB" d="M395.942 554.883 L308.8 642.025 L308.8 524.949 L365.176 468.573 L365.176 554.883 Z" />
+      <path id="pieceA" d="M215.673 525.115 L302.813 437.975 L302.813 555.05 L246.439 611.426 L246.439 525.115 Z" />
+    </g>
+
+    <!-- light sweep clipped to the logo -->
+    <g clip-path="url(#logoClip)">
+      <rect id="sweepR" x="-260" y="380" width="220" height="320" fill="url(#sweep)" opacity="0"
+        transform="skewX(-20)" />
+    </g>
+
+    <g id="sparks"></g>
+  </svg>
+
+  <script>
+    (function () {
+      var NS = 'http://www.w3.org/2000/svg';
+      var $ = function (id) { return document.getElementById(id) };
+      var sparks = $('sparks');
+      var OUT = 'cubic-bezier(.16,1,.3,1)';
+
+      function an(el, kf, delay, dur, ease) {
+        return el.animate(kf, { delay: delay, duration: dur, easing: ease || 'linear', fill: 'both' });
+      }
+
+      function play() {
+        document.getAnimations().forEach(function (a) { a.cancel() });
+        sparks.innerHTML = '';
+
+        /* 0.3s - 1.15s : two pieces slide in along the 45deg rails and lock together */
+        an($('pieceA'), [
+          { transform: 'translate(-260px,260px)', opacity: 0 },
+          { opacity: 1, offset: .35 },
+          { transform: 'translate(0,0)', opacity: 1 }
+        ], 300, 850, 'cubic-bezier(.65,0,.15,1)');
+        an($('pieceB'), [
+          { transform: 'translate(260px,-260px)', opacity: 0 },
+          { opacity: 1, offset: .35 },
+          { transform: 'translate(0,0)', opacity: 1 }
+        ], 300, 850, 'cubic-bezier(.65,0,.15,1)');
+
+        /* 1.15s : impact - mark punch */
+        an($('mark'), [
+          { transform: 'scale(1)' },
+          { transform: 'scale(1.09)', offset: .3 },
+          { transform: 'scale(1)' }
+        ], 1150, 600, OUT);
+
+        /* flash + settle glow, then slow breathing */
+        an($('glowC'), [
+          { opacity: 0, transform: 'scale(.4)' },
+          { opacity: 1, transform: 'scale(1.15)', offset: .12 },
+          { opacity: .38, transform: 'scale(1)', offset: .5 },
+          { opacity: .55, transform: 'scale(1.04)', offset: .75 },
+          { opacity: .42, transform: 'scale(1)' }
+        ], 1150, 3850, 'ease-out');
+
+        /* shockwave from the mark */
+        an($('ring1'), [
+          { opacity: .9, transform: 'scale(.3)', strokeWidth: '4px' },
+          { opacity: 0, transform: 'scale(3.2)', strokeWidth: '1px' }
+        ], 1150, 1000, OUT);
+
+        /* sparks */
+        for (var i = 0; i < 16; i++) {
+          var c = document.createElementNS(NS, 'circle');
+          var r = 2 + ((i * 37) % 4);
+          c.setAttribute('cx', 305); c.setAttribute('cy', 540); c.setAttribute('r', r);
+          c.setAttribute('fill', '#e1ff01');
+          c.setAttribute('class', 'fb');
+          sparks.appendChild(c);
+          var ang = (i / 16) * Math.PI * 2 + ((i * 53) % 10) * 0.03;
+          var dist = 140 + ((i * 71) % 120);
+          an(c, [
+            { transform: 'translate(0,0) scale(1)', opacity: 1 },
+            { transform: 'translate(' + Math.cos(ang) * dist + 'px,' + Math.sin(ang) * dist + 'px) scale(0)', opacity: 0 }
+          ], 1150 + (i % 4) * 40, 700 + ((i * 29) % 300), OUT);
+        }
+
+        /* 1.45s - : letters follow, left to right */
+        var L = document.querySelectorAll('.L');
+        for (var k = 0; k < L.length; k++) {
+          an(L[k], [
+            { opacity: 0, transform: 'translateX(-46px)' },
+            { opacity: 1, transform: 'translateX(0)' }
+          ], 1450 + k * 130, 750, OUT);
+        }
+
+        /* 2.1s : the "o" fires an energy ripple */
+        an($('ring2'), [
+          { opacity: .9, transform: 'scale(.9)', strokeWidth: '4px' },
+          { opacity: 0, transform: 'scale(2.3)', strokeWidth: '1px' }
+        ], 2100, 1000, OUT);
+        an($('ring3'), [
+          { opacity: .7, transform: 'scale(.9)' },
+          { opacity: 0, transform: 'scale(3)' }
+        ], 2300, 1100, OUT);
+
+        /* 3.0s : light sweep across the whole logo */
+        an($('sweepR'), [
+          { opacity: 0, transform: 'skewX(-20deg) translateX(0px)' },
+          { opacity: 1, offset: .1 },
+          { opacity: 1, offset: .9 },
+          { opacity: 0, transform: 'skewX(-20deg) translateX(1350px)' }
+        ], 3000, 1100, 'cubic-bezier(.5,0,.3,1)');
+      }
+
+      $('stage').addEventListener('click', play);
+      document.addEventListener('keydown', function (e) { if (e.key === 'r' || e.key === 'R' || e.key === ' ') play() });
+      play();
+    })();
+  </script>
+</body>
+
+</html>
