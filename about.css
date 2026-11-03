@@ -234,6 +234,7 @@ main {
             display: flex;
             flex-direction: row;
             gap: 20px;
+            justify-contect: space-between;
 
             .person {
                 background-color: rgba(128, 128, 128, 0.236);
